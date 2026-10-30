@@ -1,0 +1,22 @@
+{
+  "name": "pi-arena",
+  "version": "0.1.0",
+  "description": "A fair, replayable tournament runner for Pi coding agents.",
+  "type": "module",
+  "bin": {
+    "pi-arena": "src/cli.js"
+  },
+  "scripts": {
+    "test": "node --test",
+    "demo": "node src/cli.js demo"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "keywords": ["pi-package", "pi-coding-agent", "agent-evaluation", "llm-eval", "coding-agents"],
+  "license": "MIT",
+  "pi": {
+    "extensions": ["./extensions/arena.js"],
+    "skills": ["./skills/arena"]
+  }
+}
