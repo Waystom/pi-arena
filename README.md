@@ -14,7 +14,7 @@ cd pi-arena
 npm run demo
 ```
 
-Open `arena-demo/index.html` in a browser. Three local contestants receive the same discount-rule task. One solves it correctly, one makes a boundary mistake, and one overfits the visible example. The report shows the score, hidden checks, timeline, changed files, and winner.
+Open `arena-demo/index.html` in a browser. Three local contestants receive the same discount-rule task. One solves it correctly, one makes a boundary mistake, and one overfits the visible example. The replay console turns the run into a small race: press **Replay race**, watch each lane advance, select a contestant, and inspect its action timeline and evaluation checks.
 
 The demo is deliberately deterministic. It lets contributors test the evaluator and viewer without spending money or depending on a model provider.
 
