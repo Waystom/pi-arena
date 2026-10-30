@@ -61,11 +61,18 @@ export function piRpcContestant({ id, label = id, model, piCommand = "pi", timeo
 function summarizeRecord(record) {
   if (record.type === "message_update") {
     const event = record.assistantMessageEvent;
-    return event?.type === "text_delta" ? `text: ${event.delta}` : event?.type ?? "message update";
+    return event?.type === "text_delta" ? `text: ${redact(event.delta)}` : event?.type ?? "message update";
   }
   if (record.type === "tool_execution_start") return `tool: ${record.toolName ?? record.toolCallId ?? "unknown"}`;
   if (record.type === "tool_execution_end") return `tool finished: ${record.toolName ?? record.toolCallId ?? "unknown"}`;
   if (record.type === "agent_end") return "agent run ended";
   if (record.type === "agent_settled") return "agent settled";
   return record.command ?? record.type ?? "event";
+}
+
+function redact(value) {
+  return String(value ?? "")
+    .replace(/(sk-[A-Za-z0-9_-]{12,})/gu, "[REDACTED_KEY]")
+    .replace(/(Bearer\s+)[A-Za-z0-9._-]+/giu, "$1[REDACTED]")
+    .slice(0, 500);
 }
