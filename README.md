@@ -18,7 +18,24 @@ Open `arena-demo/index.html` in a browser. Three local contestants receive the s
 
 The demo is deliberately deterministic. It lets contributors test the evaluator and viewer without spending money or depending on a model provider.
 
-中文文档：[`SKILL_USAGE.md`](./SKILL_USAGE.md) · [`COMPARISON.md`](./COMPARISON.md)
+中文文档：[`SKILL_USAGE.md`](./SKILL_USAGE.md) · [`Word 对比报告`](./pi-arena-comparison.docx)
+
+## Visual comparison
+
+The report includes a two-page Word comparison with the same task run without and with Pi Arena. The screenshots below show the visible difference in evidence, replayability, and review structure.
+
+<table>
+<tr>
+<td align="center"><strong>不含 Skill</strong></td>
+<td align="center"><strong>含 Pi Arena Skill</strong></td>
+</tr>
+<tr>
+<td><img src="screenshots/without-skill.png" alt="Without Pi Arena Skill"></td>
+<td><img src="screenshots/with-skill.png" alt="With Pi Arena Skill"></td>
+</tr>
+</table>
+
+完整的图片对比、能力表格和复现步骤见 [`Word 对比报告`](./pi-arena-comparison.docx)。
 
 ## Why this is a Pi package
 
