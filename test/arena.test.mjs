@@ -42,7 +42,7 @@ test("viewer emits a standalone report containing the score table and timeline",
     const html = await readFile(output, "utf8");
     assert.match(html, /Example/);
     assert.match(html, /src\/a\.js/);
-    assert.match(html, /PI ARENA \/ REPLAY REPORT/);
+    assert.match(html, /PI ARENA \/ REPLAY CONSOLE/);
   } finally {
     await rm(fixture, { recursive: true, force: true });
   }
