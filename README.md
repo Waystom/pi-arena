@@ -18,6 +18,8 @@ Open `arena-demo/index.html` in a browser. Three local contestants receive the s
 
 The demo is deliberately deterministic. It lets contributors test the evaluator and viewer without spending money or depending on a model provider.
 
+中文文档：[`SKILL_USAGE.md`](./SKILL_USAGE.md) · [`COMPARISON.md`](./COMPARISON.md)
+
 ## Why this is a Pi package
 
 The `skills/arena/SKILL.md` file gives Pi the tournament protocol: equal starting state, isolated workspaces, objective evaluation, secret redaction, and blind human review. The runner is separate from the skill because fairness and scoring must be enforced by code rather than trusted to the model.
